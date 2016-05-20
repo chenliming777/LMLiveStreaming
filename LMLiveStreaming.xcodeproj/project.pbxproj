@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F8726F1CEF04D600C4B126 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8726E1CEF04D600C4B126 /* main.m */; };
+		84F872721CEF04D600C4B126 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872711CEF04D600C4B126 /* AppDelegate.m */; };
+		84F872751CEF04D600C4B126 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872741CEF04D600C4B126 /* ViewController.m */; };
+		84F872781CEF04D600C4B126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F872761CEF04D600C4B126 /* Main.storyboard */; };
+		84F8727A1CEF04D600C4B126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F872791CEF04D600C4B126 /* Assets.xcassets */; };
+		84F8727D1CEF04D600C4B126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F8727B1CEF04D600C4B126 /* LaunchScreen.storyboard */; };
+		84F872DB1CEF055300C4B126 /* LMAudioCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872A31CEF055300C4B126 /* LMAudioCapture.m */; };
+		84F872DC1CEF055300C4B126 /* LMVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872A51CEF055300C4B126 /* LMVideoCapture.m */; };
+		84F872DD1CEF055300C4B126 /* LMHardwareAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872A91CEF055300C4B126 /* LMHardwareAudioEncoder.m */; };
+		84F872DE1CEF055300C4B126 /* LMHardwareVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872AB1CEF055300C4B126 /* LMHardwareVideoEncoder.m */; };
+		84F872DF1CEF055300C4B126 /* LMAudioStreamingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872AF1CEF055300C4B126 /* LMAudioStreamingConfiguration.m */; };
+		84F872E01CEF055300C4B126 /* LMVideoStreamingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872B11CEF055300C4B126 /* LMVideoStreamingConfiguration.m */; };
+		84F872E11CEF055300C4B126 /* LMGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872B41CEF055300C4B126 /* LMGPUImageBeautyFilter.m */; };
+		84F872E21CEF055300C4B126 /* LMGPUImageEmptyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872B61CEF055300C4B126 /* LMGPUImageEmptyFilter.m */; };
+		84F872E31CEF055300C4B126 /* LMStreamingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872B81CEF055300C4B126 /* LMStreamingSession.m */; };
+		84F872E41CEF055300C4B126 /* LMAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872BB1CEF055300C4B126 /* LMAudioFrame.m */; };
+		84F872E51CEF055300C4B126 /* LMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872BD1CEF055300C4B126 /* LMFrame.m */; };
+		84F872E61CEF055300C4B126 /* LMStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872BF1CEF055300C4B126 /* LMStream.m */; };
+		84F872E71CEF055300C4B126 /* LMStreamDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872C11CEF055300C4B126 /* LMStreamDebug.m */; };
+		84F872E81CEF055300C4B126 /* LMVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872C31CEF055300C4B126 /* LMVideoFrame.m */; };
+		84F872E91CEF055300C4B126 /* amf.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F872C61CEF055300C4B126 /* amf.c */; };
+		84F872EA1CEF055300C4B126 /* avc.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F872C81CEF055300C4B126 /* avc.c */; };
+		84F872EB1CEF055300C4B126 /* flv.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F872CA1CEF055300C4B126 /* flv.c */; };
+		84F872EC1CEF055300C4B126 /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F872CC1CEF055300C4B126 /* info.c */; };
+		84F872ED1CEF055300C4B126 /* types.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F872CE1CEF055300C4B126 /* types.c */; };
+		84F872EE1CEF055300C4B126 /* LMFlvPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872D11CEF055300C4B126 /* LMFlvPackage.m */; };
+		84F872EF1CEF055300C4B126 /* LMStreamingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872D51CEF055300C4B126 /* LMStreamingBuffer.m */; };
+		84F872F01CEF055300C4B126 /* LMStreamRtmpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872D71CEF055300C4B126 /* LMStreamRtmpSocket.m */; };
+		84F872F11CEF055300C4B126 /* LMStreamTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872DA1CEF055300C4B126 /* LMStreamTcpSocket.m */; };
+		84F872FB1CEF055C00C4B126 /* NSMutableArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872F41CEF055C00C4B126 /* NSMutableArray+YYAdd.m */; };
+		84F872FC1CEF055C00C4B126 /* UIControl+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872F61CEF055C00C4B126 /* UIControl+YYAdd.m */; };
+		84F872FD1CEF055C00C4B126 /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872F81CEF055C00C4B126 /* UIView+YYAdd.m */; };
+		84F872FE1CEF055C00C4B126 /* LMLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F872FA1CEF055C00C4B126 /* LMLivePreview.m */; };
+		84F8738B1CEF057300C4B126 /* camra_beauty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873831CEF057300C4B126 /* camra_beauty@2x.png */; };
+		84F8738C1CEF057300C4B126 /* camra_beauty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873841CEF057300C4B126 /* camra_beauty@3x.png */; };
+		84F8738D1CEF057300C4B126 /* camra_beauty_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873851CEF057300C4B126 /* camra_beauty_close@2x.png */; };
+		84F8738E1CEF057300C4B126 /* camra_beauty_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873861CEF057300C4B126 /* camra_beauty_close@3x.png */; };
+		84F8738F1CEF057300C4B126 /* camra_preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873871CEF057300C4B126 /* camra_preview@2x.png */; };
+		84F873901CEF057300C4B126 /* camra_preview@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873881CEF057300C4B126 /* camra_preview@3x.png */; };
+		84F873911CEF057300C4B126 /* close_preview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F873891CEF057300C4B126 /* close_preview@2x.png */; };
+		84F873921CEF057300C4B126 /* close_preview@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F8738A1CEF057300C4B126 /* close_preview@3x.png */; };
+		84F873941CEF059900C4B126 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F873931CEF059900C4B126 /* libz.tbd */; };
+		84F873961CEF059E00C4B126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F873951CEF059E00C4B126 /* UIKit.framework */; };
+		84F873981CEF05A200C4B126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F873971CEF05A200C4B126 /* Foundation.framework */; };
+		84F8739A1CEF05A700C4B126 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F873991CEF05A700C4B126 /* AVFoundation.framework */; };
+		84F8739C1CEF05AB00C4B126 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8739B1CEF05AB00C4B126 /* AudioToolbox.framework */; };
+		84F8739E1CEF05B000C4B126 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8739D1CEF05B000C4B126 /* VideoToolbox.framework */; };
+		BD44BFDA88065193301C0F9E /* libPods-LMLiveStreaming.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2D32538BDEDC07503C9D95 /* libPods-LMLiveStreaming.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84F8726A1CEF04D600C4B126 /* LMLiveStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMLiveStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F8726E1CEF04D600C4B126 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84F872701CEF04D600C4B126 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84F872711CEF04D600C4B126 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84F872731CEF04D600C4B126 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84F872741CEF04D600C4B126 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84F872771CEF04D600C4B126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F872791CEF04D600C4B126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F8727C1CEF04D600C4B126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F8727E1CEF04D600C4B126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F872A21CEF055300C4B126 /* LMAudioCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAudioCapture.h; sourceTree = "<group>"; };
+		84F872A31CEF055300C4B126 /* LMAudioCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAudioCapture.m; sourceTree = "<group>"; };
+		84F872A41CEF055300C4B126 /* LMVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoCapture.h; sourceTree = "<group>"; };
+		84F872A51CEF055300C4B126 /* LMVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoCapture.m; sourceTree = "<group>"; };
+		84F872A71CEF055300C4B126 /* LMAudioEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAudioEncoder.h; sourceTree = "<group>"; };
+		84F872A81CEF055300C4B126 /* LMHardwareAudioEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHardwareAudioEncoder.h; sourceTree = "<group>"; };
+		84F872A91CEF055300C4B126 /* LMHardwareAudioEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHardwareAudioEncoder.m; sourceTree = "<group>"; };
+		84F872AA1CEF055300C4B126 /* LMHardwareVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHardwareVideoEncoder.h; sourceTree = "<group>"; };
+		84F872AB1CEF055300C4B126 /* LMHardwareVideoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHardwareVideoEncoder.m; sourceTree = "<group>"; };
+		84F872AC1CEF055300C4B126 /* LMVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoEncoder.h; sourceTree = "<group>"; };
+		84F872AE1CEF055300C4B126 /* LMAudioStreamingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAudioStreamingConfiguration.h; sourceTree = "<group>"; };
+		84F872AF1CEF055300C4B126 /* LMAudioStreamingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAudioStreamingConfiguration.m; sourceTree = "<group>"; };
+		84F872B01CEF055300C4B126 /* LMVideoStreamingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoStreamingConfiguration.h; sourceTree = "<group>"; };
+		84F872B11CEF055300C4B126 /* LMVideoStreamingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoStreamingConfiguration.m; sourceTree = "<group>"; };
+		84F872B31CEF055300C4B126 /* LMGPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		84F872B41CEF055300C4B126 /* LMGPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		84F872B51CEF055300C4B126 /* LMGPUImageEmptyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMGPUImageEmptyFilter.h; sourceTree = "<group>"; };
+		84F872B61CEF055300C4B126 /* LMGPUImageEmptyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMGPUImageEmptyFilter.m; sourceTree = "<group>"; };
+		84F872B71CEF055300C4B126 /* LMStreamingSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamingSession.h; sourceTree = "<group>"; };
+		84F872B81CEF055300C4B126 /* LMStreamingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStreamingSession.m; sourceTree = "<group>"; };
+		84F872BA1CEF055300C4B126 /* LMAudioFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAudioFrame.h; sourceTree = "<group>"; };
+		84F872BB1CEF055300C4B126 /* LMAudioFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAudioFrame.m; sourceTree = "<group>"; };
+		84F872BC1CEF055300C4B126 /* LMFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFrame.h; sourceTree = "<group>"; };
+		84F872BD1CEF055300C4B126 /* LMFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFrame.m; sourceTree = "<group>"; };
+		84F872BE1CEF055300C4B126 /* LMStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStream.h; sourceTree = "<group>"; };
+		84F872BF1CEF055300C4B126 /* LMStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStream.m; sourceTree = "<group>"; };
+		84F872C01CEF055300C4B126 /* LMStreamDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamDebug.h; sourceTree = "<group>"; };
+		84F872C11CEF055300C4B126 /* LMStreamDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStreamDebug.m; sourceTree = "<group>"; };
+		84F872C21CEF055300C4B126 /* LMVideoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoFrame.h; sourceTree = "<group>"; };
+		84F872C31CEF055300C4B126 /* LMVideoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoFrame.m; sourceTree = "<group>"; };
+		84F872C61CEF055300C4B126 /* amf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = amf.c; sourceTree = "<group>"; };
+		84F872C71CEF055300C4B126 /* amf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
+		84F872C81CEF055300C4B126 /* avc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = avc.c; sourceTree = "<group>"; };
+		84F872C91CEF055300C4B126 /* avc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avc.h; sourceTree = "<group>"; };
+		84F872CA1CEF055300C4B126 /* flv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = flv.c; sourceTree = "<group>"; };
+		84F872CB1CEF055300C4B126 /* flv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flv.h; sourceTree = "<group>"; };
+		84F872CC1CEF055300C4B126 /* info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = info.c; sourceTree = "<group>"; };
+		84F872CD1CEF055300C4B126 /* info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = info.h; sourceTree = "<group>"; };
+		84F872CE1CEF055300C4B126 /* types.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = types.c; sourceTree = "<group>"; };
+		84F872CF1CEF055300C4B126 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		84F872D01CEF055300C4B126 /* LMFlvPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMFlvPackage.h; sourceTree = "<group>"; };
+		84F872D11CEF055300C4B126 /* LMFlvPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMFlvPackage.m; sourceTree = "<group>"; };
+		84F872D21CEF055300C4B126 /* LMStreamPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamPackage.h; sourceTree = "<group>"; };
+		84F872D41CEF055300C4B126 /* LMStreamingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamingBuffer.h; sourceTree = "<group>"; };
+		84F872D51CEF055300C4B126 /* LMStreamingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStreamingBuffer.m; sourceTree = "<group>"; };
+		84F872D61CEF055300C4B126 /* LMStreamRtmpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamRtmpSocket.h; sourceTree = "<group>"; };
+		84F872D71CEF055300C4B126 /* LMStreamRtmpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStreamRtmpSocket.m; sourceTree = "<group>"; };
+		84F872D81CEF055300C4B126 /* LMStreamSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamSocket.h; sourceTree = "<group>"; };
+		84F872D91CEF055300C4B126 /* LMStreamTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMStreamTcpSocket.h; sourceTree = "<group>"; };
+		84F872DA1CEF055300C4B126 /* LMStreamTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMStreamTcpSocket.m; sourceTree = "<group>"; };
+		84F872F31CEF055C00C4B126 /* NSMutableArray+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+YYAdd.h"; sourceTree = "<group>"; };
+		84F872F41CEF055C00C4B126 /* NSMutableArray+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+YYAdd.m"; sourceTree = "<group>"; };
+		84F872F51CEF055C00C4B126 /* UIControl+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+YYAdd.h"; sourceTree = "<group>"; };
+		84F872F61CEF055C00C4B126 /* UIControl+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+YYAdd.m"; sourceTree = "<group>"; };
+		84F872F71CEF055C00C4B126 /* UIView+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
+		84F872F81CEF055C00C4B126 /* UIView+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYAdd.m"; sourceTree = "<group>"; };
+		84F872F91CEF055C00C4B126 /* LMLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLivePreview.h; sourceTree = "<group>"; };
+		84F872FA1CEF055C00C4B126 /* LMLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLivePreview.m; sourceTree = "<group>"; };
+		84F873831CEF057300C4B126 /* camra_beauty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty@2x.png"; sourceTree = "<group>"; };
+		84F873841CEF057300C4B126 /* camra_beauty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty@3x.png"; sourceTree = "<group>"; };
+		84F873851CEF057300C4B126 /* camra_beauty_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty_close@2x.png"; sourceTree = "<group>"; };
+		84F873861CEF057300C4B126 /* camra_beauty_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_beauty_close@3x.png"; sourceTree = "<group>"; };
+		84F873871CEF057300C4B126 /* camra_preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_preview@2x.png"; sourceTree = "<group>"; };
+		84F873881CEF057300C4B126 /* camra_preview@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camra_preview@3x.png"; sourceTree = "<group>"; };
+		84F873891CEF057300C4B126 /* close_preview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_preview@2x.png"; sourceTree = "<group>"; };
+		84F8738A1CEF057300C4B126 /* close_preview@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_preview@3x.png"; sourceTree = "<group>"; };
+		84F873931CEF059900C4B126 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		84F873951CEF059E00C4B126 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84F873971CEF05A200C4B126 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84F873991CEF05A700C4B126 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		84F8739B1CEF05AB00C4B126 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84F8739D1CEF05B000C4B126 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		DB2D32538BDEDC07503C9D95 /* libPods-LMLiveStreaming.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMLiveStreaming.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF798D8B301483C82057925A /* Pods-LMLiveStreaming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMLiveStreaming.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming.release.xcconfig"; sourceTree = "<group>"; };
+		ED2DB2B2E89046277143B01C /* Pods-LMLiveStreaming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMLiveStreaming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F872671CEF04D600C4B126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F8739E1CEF05B000C4B126 /* VideoToolbox.framework in Frameworks */,
+				84F8739C1CEF05AB00C4B126 /* AudioToolbox.framework in Frameworks */,
+				84F8739A1CEF05A700C4B126 /* AVFoundation.framework in Frameworks */,
+				84F873981CEF05A200C4B126 /* Foundation.framework in Frameworks */,
+				84F873961CEF059E00C4B126 /* UIKit.framework in Frameworks */,
+				84F873941CEF059900C4B126 /* libz.tbd in Frameworks */,
+				BD44BFDA88065193301C0F9E /* libPods-LMLiveStreaming.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84F872611CEF04D600C4B126 = {
+			isa = PBXGroup;
+			children = (
+				84F8726C1CEF04D600C4B126 /* LMLiveStreaming */,
+				84F8726B1CEF04D600C4B126 /* Products */,
+				A2F8F157EA6E372CACA3A251 /* Pods */,
+				D57285E23964ACFFD90DB7ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84F8726B1CEF04D600C4B126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F8726A1CEF04D600C4B126 /* LMLiveStreaming.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F8726C1CEF04D600C4B126 /* LMLiveStreaming */ = {
+			isa = PBXGroup;
+			children = (
+				84F872A01CEF055300C4B126 /* LMLiveStreamingKit */,
+				84F872701CEF04D600C4B126 /* AppDelegate.h */,
+				84F872711CEF04D600C4B126 /* AppDelegate.m */,
+				84F872F91CEF055C00C4B126 /* LMLivePreview.h */,
+				84F872FA1CEF055C00C4B126 /* LMLivePreview.m */,
+				84F872731CEF04D600C4B126 /* ViewController.h */,
+				84F872741CEF04D600C4B126 /* ViewController.m */,
+				84F872761CEF04D600C4B126 /* Main.storyboard */,
+				84F872F21CEF055C00C4B126 /* category */,
+				84F872791CEF04D600C4B126 /* Assets.xcassets */,
+				84F8727B1CEF04D600C4B126 /* LaunchScreen.storyboard */,
+				84F8727E1CEF04D600C4B126 /* Info.plist */,
+				84F8726D1CEF04D600C4B126 /* Supporting Files */,
+			);
+			path = LMLiveStreaming;
+			sourceTree = "<group>";
+		};
+		84F8726D1CEF04D600C4B126 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84F8726E1CEF04D600C4B126 /* main.m */,
+				84F873821CEF057300C4B126 /* images */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F872A01CEF055300C4B126 /* LMLiveStreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				84F872A11CEF055300C4B126 /* capture */,
+				84F872A61CEF055300C4B126 /* coder */,
+				84F872AD1CEF055300C4B126 /* configuration */,
+				84F872B21CEF055300C4B126 /* filter */,
+				84F872B71CEF055300C4B126 /* LMStreamingSession.h */,
+				84F872B81CEF055300C4B126 /* LMStreamingSession.m */,
+				84F872B91CEF055300C4B126 /* objects */,
+				84F872C41CEF055300C4B126 /* packet */,
+				84F872D31CEF055300C4B126 /* upload */,
+			);
+			path = LMLiveStreamingKit;
+			sourceTree = "<group>";
+		};
+		84F872A11CEF055300C4B126 /* capture */ = {
+			isa = PBXGroup;
+			children = (
+				84F872A21CEF055300C4B126 /* LMAudioCapture.h */,
+				84F872A31CEF055300C4B126 /* LMAudioCapture.m */,
+				84F872A41CEF055300C4B126 /* LMVideoCapture.h */,
+				84F872A51CEF055300C4B126 /* LMVideoCapture.m */,
+			);
+			path = capture;
+			sourceTree = "<group>";
+		};
+		84F872A61CEF055300C4B126 /* coder */ = {
+			isa = PBXGroup;
+			children = (
+				84F872A71CEF055300C4B126 /* LMAudioEncoder.h */,
+				84F872A81CEF055300C4B126 /* LMHardwareAudioEncoder.h */,
+				84F872A91CEF055300C4B126 /* LMHardwareAudioEncoder.m */,
+				84F872AA1CEF055300C4B126 /* LMHardwareVideoEncoder.h */,
+				84F872AB1CEF055300C4B126 /* LMHardwareVideoEncoder.m */,
+				84F872AC1CEF055300C4B126 /* LMVideoEncoder.h */,
+			);
+			path = coder;
+			sourceTree = "<group>";
+		};
+		84F872AD1CEF055300C4B126 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				84F872AE1CEF055300C4B126 /* LMAudioStreamingConfiguration.h */,
+				84F872AF1CEF055300C4B126 /* LMAudioStreamingConfiguration.m */,
+				84F872B01CEF055300C4B126 /* LMVideoStreamingConfiguration.h */,
+				84F872B11CEF055300C4B126 /* LMVideoStreamingConfiguration.m */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		84F872B21CEF055300C4B126 /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				84F872B31CEF055300C4B126 /* LMGPUImageBeautyFilter.h */,
+				84F872B41CEF055300C4B126 /* LMGPUImageBeautyFilter.m */,
+				84F872B51CEF055300C4B126 /* LMGPUImageEmptyFilter.h */,
+				84F872B61CEF055300C4B126 /* LMGPUImageEmptyFilter.m */,
+			);
+			path = filter;
+			sourceTree = "<group>";
+		};
+		84F872B91CEF055300C4B126 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				84F872BA1CEF055300C4B126 /* LMAudioFrame.h */,
+				84F872BB1CEF055300C4B126 /* LMAudioFrame.m */,
+				84F872BC1CEF055300C4B126 /* LMFrame.h */,
+				84F872BD1CEF055300C4B126 /* LMFrame.m */,
+				84F872BE1CEF055300C4B126 /* LMStream.h */,
+				84F872BF1CEF055300C4B126 /* LMStream.m */,
+				84F872C01CEF055300C4B126 /* LMStreamDebug.h */,
+				84F872C11CEF055300C4B126 /* LMStreamDebug.m */,
+				84F872C21CEF055300C4B126 /* LMVideoFrame.h */,
+				84F872C31CEF055300C4B126 /* LMVideoFrame.m */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		84F872C41CEF055300C4B126 /* packet */ = {
+			isa = PBXGroup;
+			children = (
+				84F872C51CEF055300C4B126 /* flv */,
+				84F872D01CEF055300C4B126 /* LMFlvPackage.h */,
+				84F872D11CEF055300C4B126 /* LMFlvPackage.m */,
+				84F872D21CEF055300C4B126 /* LMStreamPackage.h */,
+			);
+			path = packet;
+			sourceTree = "<group>";
+		};
+		84F872C51CEF055300C4B126 /* flv */ = {
+			isa = PBXGroup;
+			children = (
+				84F872C61CEF055300C4B126 /* amf.c */,
+				84F872C71CEF055300C4B126 /* amf.h */,
+				84F872C81CEF055300C4B126 /* avc.c */,
+				84F872C91CEF055300C4B126 /* avc.h */,
+				84F872CA1CEF055300C4B126 /* flv.c */,
+				84F872CB1CEF055300C4B126 /* flv.h */,
+				84F872CC1CEF055300C4B126 /* info.c */,
+				84F872CD1CEF055300C4B126 /* info.h */,
+				84F872CE1CEF055300C4B126 /* types.c */,
+				84F872CF1CEF055300C4B126 /* types.h */,
+			);
+			path = flv;
+			sourceTree = "<group>";
+		};
+		84F872D31CEF055300C4B126 /* upload */ = {
+			isa = PBXGroup;
+			children = (
+				84F872D41CEF055300C4B126 /* LMStreamingBuffer.h */,
+				84F872D51CEF055300C4B126 /* LMStreamingBuffer.m */,
+				84F872D61CEF055300C4B126 /* LMStreamRtmpSocket.h */,
+				84F872D71CEF055300C4B126 /* LMStreamRtmpSocket.m */,
+				84F872D81CEF055300C4B126 /* LMStreamSocket.h */,
+				84F872D91CEF055300C4B126 /* LMStreamTcpSocket.h */,
+				84F872DA1CEF055300C4B126 /* LMStreamTcpSocket.m */,
+			);
+			path = upload;
+			sourceTree = "<group>";
+		};
+		84F872F21CEF055C00C4B126 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				84F872F31CEF055C00C4B126 /* NSMutableArray+YYAdd.h */,
+				84F872F41CEF055C00C4B126 /* NSMutableArray+YYAdd.m */,
+				84F872F51CEF055C00C4B126 /* UIControl+YYAdd.h */,
+				84F872F61CEF055C00C4B126 /* UIControl+YYAdd.m */,
+				84F872F71CEF055C00C4B126 /* UIView+YYAdd.h */,
+				84F872F81CEF055C00C4B126 /* UIView+YYAdd.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		84F873821CEF057300C4B126 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				84F873831CEF057300C4B126 /* camra_beauty@2x.png */,
+				84F873841CEF057300C4B126 /* camra_beauty@3x.png */,
+				84F873851CEF057300C4B126 /* camra_beauty_close@2x.png */,
+				84F873861CEF057300C4B126 /* camra_beauty_close@3x.png */,
+				84F873871CEF057300C4B126 /* camra_preview@2x.png */,
+				84F873881CEF057300C4B126 /* camra_preview@3x.png */,
+				84F873891CEF057300C4B126 /* close_preview@2x.png */,
+				84F8738A1CEF057300C4B126 /* close_preview@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		A2F8F157EA6E372CACA3A251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED2DB2B2E89046277143B01C /* Pods-LMLiveStreaming.debug.xcconfig */,
+				DF798D8B301483C82057925A /* Pods-LMLiveStreaming.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D57285E23964ACFFD90DB7ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F8739D1CEF05B000C4B126 /* VideoToolbox.framework */,
+				84F8739B1CEF05AB00C4B126 /* AudioToolbox.framework */,
+				84F873991CEF05A700C4B126 /* AVFoundation.framework */,
+				84F873971CEF05A200C4B126 /* Foundation.framework */,
+				84F873951CEF059E00C4B126 /* UIKit.framework */,
+				84F873931CEF059900C4B126 /* libz.tbd */,
+				DB2D32538BDEDC07503C9D95 /* libPods-LMLiveStreaming.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F872691CEF04D600C4B126 /* LMLiveStreaming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F872971CEF04D600C4B126 /* Build configuration list for PBXNativeTarget "LMLiveStreaming" */;
+			buildPhases = (
+				217FF246F62DE727BD8EE45B /* 📦 Check Pods Manifest.lock */,
+				84F872661CEF04D600C4B126 /* Sources */,
+				84F872671CEF04D600C4B126 /* Frameworks */,
+				84F872681CEF04D600C4B126 /* Resources */,
+				95B25AED811CF62D15C13394 /* 📦 Embed Pods Frameworks */,
+				6815D2AD28F531AC174CEC02 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMLiveStreaming;
+			productName = LMLiveStreaming;
+			productReference = 84F8726A1CEF04D600C4B126 /* LMLiveStreaming.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F872621CEF04D600C4B126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					84F872691CEF04D600C4B126 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 84F872651CEF04D600C4B126 /* Build configuration list for PBXProject "LMLiveStreaming" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F872611CEF04D600C4B126;
+			productRefGroup = 84F8726B1CEF04D600C4B126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F872691CEF04D600C4B126 /* LMLiveStreaming */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F872681CEF04D600C4B126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F8738D1CEF057300C4B126 /* camra_beauty_close@2x.png in Resources */,
+				84F8727D1CEF04D600C4B126 /* LaunchScreen.storyboard in Resources */,
+				84F8738B1CEF057300C4B126 /* camra_beauty@2x.png in Resources */,
+				84F8727A1CEF04D600C4B126 /* Assets.xcassets in Resources */,
+				84F873901CEF057300C4B126 /* camra_preview@3x.png in Resources */,
+				84F8738E1CEF057300C4B126 /* camra_beauty_close@3x.png in Resources */,
+				84F873921CEF057300C4B126 /* close_preview@3x.png in Resources */,
+				84F873911CEF057300C4B126 /* close_preview@2x.png in Resources */,
+				84F872781CEF04D600C4B126 /* Main.storyboard in Resources */,
+				84F8738F1CEF057300C4B126 /* camra_preview@2x.png in Resources */,
+				84F8738C1CEF057300C4B126 /* camra_beauty@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		217FF246F62DE727BD8EE45B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6815D2AD28F531AC174CEC02 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B25AED811CF62D15C13394 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F872661CEF04D600C4B126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F872751CEF04D600C4B126 /* ViewController.m in Sources */,
+				84F872ED1CEF055300C4B126 /* types.c in Sources */,
+				84F872E21CEF055300C4B126 /* LMGPUImageEmptyFilter.m in Sources */,
+				84F872EF1CEF055300C4B126 /* LMStreamingBuffer.m in Sources */,
+				84F872EB1CEF055300C4B126 /* flv.c in Sources */,
+				84F872FB1CEF055C00C4B126 /* NSMutableArray+YYAdd.m in Sources */,
+				84F872EE1CEF055300C4B126 /* LMFlvPackage.m in Sources */,
+				84F872E31CEF055300C4B126 /* LMStreamingSession.m in Sources */,
+				84F872721CEF04D600C4B126 /* AppDelegate.m in Sources */,
+				84F872DD1CEF055300C4B126 /* LMHardwareAudioEncoder.m in Sources */,
+				84F872DE1CEF055300C4B126 /* LMHardwareVideoEncoder.m in Sources */,
+				84F872E71CEF055300C4B126 /* LMStreamDebug.m in Sources */,
+				84F872DB1CEF055300C4B126 /* LMAudioCapture.m in Sources */,
+				84F872E11CEF055300C4B126 /* LMGPUImageBeautyFilter.m in Sources */,
+				84F872E01CEF055300C4B126 /* LMVideoStreamingConfiguration.m in Sources */,
+				84F872FE1CEF055C00C4B126 /* LMLivePreview.m in Sources */,
+				84F872F01CEF055300C4B126 /* LMStreamRtmpSocket.m in Sources */,
+				84F8726F1CEF04D600C4B126 /* main.m in Sources */,
+				84F872FC1CEF055C00C4B126 /* UIControl+YYAdd.m in Sources */,
+				84F872E51CEF055300C4B126 /* LMFrame.m in Sources */,
+				84F872E91CEF055300C4B126 /* amf.c in Sources */,
+				84F872DC1CEF055300C4B126 /* LMVideoCapture.m in Sources */,
+				84F872F11CEF055300C4B126 /* LMStreamTcpSocket.m in Sources */,
+				84F872DF1CEF055300C4B126 /* LMAudioStreamingConfiguration.m in Sources */,
+				84F872E41CEF055300C4B126 /* LMAudioFrame.m in Sources */,
+				84F872FD1CEF055C00C4B126 /* UIView+YYAdd.m in Sources */,
+				84F872EA1CEF055300C4B126 /* avc.c in Sources */,
+				84F872E81CEF055300C4B126 /* LMVideoFrame.m in Sources */,
+				84F872E61CEF055300C4B126 /* LMStream.m in Sources */,
+				84F872EC1CEF055300C4B126 /* info.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84F872761CEF04D600C4B126 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F872771CEF04D600C4B126 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F8727B1CEF04D600C4B126 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F8727C1CEF04D600C4B126 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F872951CEF04D600C4B126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F872961CEF04D600C4B126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F872981CEF04D600C4B126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2DB2B2E89046277143B01C /* Pods-LMLiveStreaming.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = LMLiveStreaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-11.LMLiveStreaming";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84F872991CEF04D600C4B126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF798D8B301483C82057925A /* Pods-LMLiveStreaming.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = LMLiveStreaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-11.LMLiveStreaming";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F872651CEF04D600C4B126 /* Build configuration list for PBXProject "LMLiveStreaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F872951CEF04D600C4B126 /* Debug */,
+				84F872961CEF04D600C4B126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F872971CEF04D600C4B126 /* Build configuration list for PBXNativeTarget "LMLiveStreaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F872981CEF04D600C4B126 /* Debug */,
+				84F872991CEF04D600C4B126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F872621CEF04D600C4B126 /* Project object */;
+}
