@@ -109,7 +109,7 @@
 #pragma mark -- Getter Setter
 - (LMStreamingSession*)session{
     if(!_session){
-        _session = [[LMStreamingSession alloc] initWithAudioConfiguration:[LMAudioStreamingConfiguration defaultConfiguration] videoConfiguration:[LMVideoStreamingConfiguration defaultConfiguration] streamType:LMStreamTcp];
+        _session = [[LMStreamingSession alloc] initWithAudioConfiguration:[LMAudioStreamingConfiguration defaultConfiguration] videoConfiguration:[LMVideoStreamingConfiguration defaultConfiguration] streamType:LMStreamRtmp];
         _session.running = YES;
         _session.preView = self;
         LMStream *stream = [[LMStream alloc] init];
