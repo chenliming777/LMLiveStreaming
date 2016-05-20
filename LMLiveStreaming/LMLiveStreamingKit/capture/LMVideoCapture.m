@@ -40,8 +40,6 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterBackground:) name:UIApplicationWillResignActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForeground:) name:UIApplicationDidBecomeActiveNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeCamera) name:CameraStatusClosedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openCamera) name:CameraStatusOpenedNotification object:nil];
         
         self.beautyFace = YES;
     }
@@ -84,14 +82,6 @@
 
 - (AVCaptureDevicePosition)captureDevicePosition{
     return [_videoCamera cameraPosition];
-}
-
-- (void)setTorchOn:(BOOL)torchOn{
-    _videoCamera.torch = torchOn;
-}
-
-- (BOOL)torchOn{
-    return  _videoCamera.isTorch;
 }
 
 - (void)setVideoFrameRate:(NSInteger)videoFrameRate{
@@ -149,21 +139,24 @@
     __weak typeof(self) _self = self;
     @autoreleasepool {
         GPUImageFramebuffer *imageFramebuffer = output.framebufferForOutput;
-        CVPixelBufferRef pixelBuffer = [imageFramebuffer pixelBuffer];
+        
+        size_t width = imageFramebuffer.size.width;
+        size_t height = imageFramebuffer.size.height;
+        ///< 这里可能会影响性能，以后要尝试修改GPUImage源码 直接获取CVPixelBufferRef 目前是获取的bytes 其实更麻烦了
+        if(imageFramebuffer.size.width == 360){
+            width = 368;///< 必须被16整除
+        }
+        
+        CVPixelBufferRef pixelBuffer = NULL;
+        CVPixelBufferCreateWithBytes(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, [imageFramebuffer byteBuffer], width * 4, nil, NULL, NULL, &pixelBuffer);
         if(pixelBuffer && _self.delegate && [_self.delegate respondsToSelector:@selector(captureOutput:pixelBuffer:)]){
             [_self.delegate captureOutput:_self pixelBuffer:pixelBuffer];
         }
+        CVPixelBufferRelease(pixelBuffer);
     }
 }
 
 #pragma mark Notification
-- (void)openCamera{
-    [_videoCamera removeVideoInputs];
-}
-
-- (void)closeCamera{
-    [_videoCamera addVideoInputs];
-}
 
 - (void)willEnterBackground:(NSNotification*)notification{
     [UIApplication sharedApplication].idleTimerDisabled = NO;

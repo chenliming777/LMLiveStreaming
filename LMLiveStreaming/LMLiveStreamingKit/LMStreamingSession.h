@@ -59,9 +59,6 @@ typedef NS_ENUM(NSUInteger, LMStreamType){
 /** The captureDevicePosition control camraPosition ,default front*/
 @property (nonatomic, assign) AVCaptureDevicePosition captureDevicePosition;
 
-/** The torchOn control camra torch*/
-@property (nonatomic, assign) BOOL torchOn;
-
 /** The beautyFace control capture shader filter empty or beautiy */
 @property (nonatomic, assign) BOOL beautyFace;
 

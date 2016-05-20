@@ -46,7 +46,7 @@
 
 #pragma mark -- LFStreamSocket
 - (instancetype)initWithStream:(LMStream*)stream{
-    if(!stream) @throw [NSException exceptionWithName:@"LFStreamRtmpSocket init error" reason:@"stream is nil" userInfo:nil];
+    if(!stream) @throw [NSException exceptionWithName:@"LMStreamRtmpSocket init error" reason:@"stream is nil" userInfo:nil];
     if(self = [super init]){
         _stream = stream;
     }
@@ -369,7 +369,7 @@ Failed:
 #pragma mark -- Getter Setter
 - (dispatch_queue_t)socketQueue{
     if(!_socketQueue){
-        _socketQueue = dispatch_queue_create("com.youku.LMStreaming.live.socketQueue", NULL);
+        _socketQueue = dispatch_queue_create("com.LMStreaming.live.socketQueue", NULL);
     }
     return _socketQueue;
 }

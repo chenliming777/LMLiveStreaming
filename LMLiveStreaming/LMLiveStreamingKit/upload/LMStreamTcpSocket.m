@@ -36,7 +36,7 @@ const NSInteger TCP_RECEIVE_TIMEOUT = -1;
 @implementation LMStreamTcpSocket
 
 - (instancetype)initWithStream:(LMStream*)stream{
-    if(!stream) @throw [NSException exceptionWithName:@"LFStreamTcpSocket init error" reason:@"stream is nil" userInfo:nil];
+    if(!stream) @throw [NSException exceptionWithName:@"LMStreamTcpSocket init error" reason:@"stream is nil" userInfo:nil];
     if(self = [super init]){
         _stream = stream;
     }
@@ -238,7 +238,7 @@ const NSInteger TCP_RECEIVE_TIMEOUT = -1;
 #pragma mark -- Getter Setter
 - (dispatch_queue_t)socketQueue{
     if(!_socketQueue){
-        _socketQueue = dispatch_queue_create("com.youku.LMStreaming.live.socketQueue", NULL);
+        _socketQueue = dispatch_queue_create("com.LMStreaming.live.socketQueue", NULL);
     }
     return _socketQueue;
 }

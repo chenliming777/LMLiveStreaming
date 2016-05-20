@@ -32,7 +32,7 @@ static const byte kAudioDataHeader = 0xAF;
 @implementation LMFlvPackage
 
 - (instancetype)initWithVideoSize:(CGSize)videoSize{
-    if(CGSizeEqualToSize(videoSize, CGSizeZero)) @throw [NSException exceptionWithName:@"LFFlvPackage init error" reason:@"video size is zero" userInfo:nil];
+    if(CGSizeEqualToSize(videoSize, CGSizeZero)) @throw [NSException exceptionWithName:@"LMFlvPackage init error" reason:@"video size is zero" userInfo:nil];
     if(self = [super init]){
         _videoSize = videoSize;
         _lock = dispatch_semaphore_create(1);

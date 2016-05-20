@@ -28,7 +28,7 @@ NSString *const LMAudioComponentFailedToCreateNotification = @"LMAudioComponentF
     if(self = [super init]){
         _configuration = configuration;
         self.isRunning = NO;
-        self.taskQueue = dispatch_queue_create("com.youku.LMStreaming.audioCapture.Queue", NULL);
+        self.taskQueue = dispatch_queue_create("com.LMStreaming.audioCapture.Queue", NULL);
         
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES withOptions:kAudioSessionSetActiveFlag_NotifyOthersOnDeactivation error:nil];

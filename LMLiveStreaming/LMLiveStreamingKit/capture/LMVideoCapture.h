@@ -10,10 +10,6 @@
 #import "LMVideoStreamingConfiguration.h"
 #import <AVFoundation/AVFoundation.h>
 
-//相机开关(当正在预览时如果此时拍摄图片则发此通知)
-#define CameraStatusOpenedNotification   @"CameraStatusOpenedNotification"
-#define CameraStatusClosedNotification   @"CameraStatusClosedNotification"
-
 @class LMVideoCapture;
 /** LMVideoCapture callback videoData */
 @protocol LMVideoCaptureDelegate <NSObject>
@@ -38,9 +34,6 @@
 
 /** The captureDevicePosition control camraPosition ,default front*/
 @property (nonatomic, assign) AVCaptureDevicePosition captureDevicePosition;
-
-/** The torchOn control camra torch*/
-@property (nonatomic, assign) BOOL torchOn;
 
 /** The beautyFace control capture shader filter empty or beautiy */
 @property (nonatomic, assign) BOOL beautyFace;

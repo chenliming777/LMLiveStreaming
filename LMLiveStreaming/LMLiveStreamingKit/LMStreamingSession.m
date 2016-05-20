@@ -49,7 +49,7 @@
 
 #pragma mark -- LifeCycle
 - (instancetype)initWithAudioConfiguration:(LMAudioStreamingConfiguration *)audioConfiguration videoConfiguration:(LMVideoStreamingConfiguration *)videoConfiguration streamType:(LMStreamType)streamType{
-    if(!audioConfiguration || !videoConfiguration) @throw [NSException exceptionWithName:@"LFStreamingSession init error" reason:@"audioConfiguration or videoConfiguration is nil " userInfo:nil];
+    if(!audioConfiguration || !videoConfiguration) @throw [NSException exceptionWithName:@"LMStreamingSession init error" reason:@"audioConfiguration or videoConfiguration is nil " userInfo:nil];
     if(self = [super init]){
         _audioConfiguration = audioConfiguration;
         _videoConfiguration = videoConfiguration;
@@ -152,7 +152,7 @@
 
 - (void)setUploading:(BOOL)uploading{
     if(!_stream && uploading) {
-        @throw [NSException exceptionWithName:@"LFStreamingSession uploading error" reason:@"stream is nil " userInfo:nil];
+        @throw [NSException exceptionWithName:@"LMStreamingSession uploading error" reason:@"stream is nil " userInfo:nil];
         return;
     }
     if(_uploading == uploading) return;
@@ -183,14 +183,6 @@
 
 - (AVCaptureDevicePosition)captureDevicePosition{
     return self.videoCaptureSource.captureDevicePosition;
-}
-
-- (void)setTorchOn:(BOOL)torchOn{
-    [self.videoCaptureSource setTorchOn:torchOn];
-}
-
-- (BOOL)torchOn{
-    return self.videoCaptureSource.torchOn;
 }
 
 - (void)setBeautyFace:(BOOL)beautyFace{
