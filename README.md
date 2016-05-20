@@ -4,6 +4,8 @@ LMLiveStreaming
 
 用法： 
     ///< 主要就是创建一个Stream对象  rtmp需要rtmp地址  tcp需要host与port
+
+
     - (LMStreamingSession*)session{
         if(!_session){
             _session = [[LMStreamingSession alloc] initWithAudioConfiguration:[LMAudioStreamingConfiguration defaultConfiguration] videoConfiguration:[LMVideoStreamingConfiguration defaultConfiguration] streamType:LMStreamRtmp];
