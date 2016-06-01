@@ -9,17 +9,17 @@
 #import "LMLivePreview.h"
 #import "UIControl+YYAdd.h"
 #import "UIView+YYAdd.h"
-#import "LMStreamingSession.h"
+#import "LFLiveSession.h"
 
-@interface LMLivePreview ()<LMStreamingSessionDelegate>
+@interface LMLivePreview ()<LFLiveSessionDelegate>
 
 @property (nonatomic, strong) UIButton *beautyButton;
 @property (nonatomic, strong) UIButton *cameraButton;
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *startLiveButton;
 @property (nonatomic, strong) UIView *containerView;
-@property (nonatomic, strong) LMStreamDebug *debugInfo;
-@property (nonatomic, strong) LMStreamingSession *session;
+@property (nonatomic, strong) LFLiveDebug *debugInfo;
+@property (nonatomic, strong) LFLiveSession *session;
 
 @end
 
@@ -91,31 +91,27 @@
 
 
 #pragma mark -- LFStreamingSessionDelegate
-/** stream status changed will callback */
-- (void)streamingSession:(nullable LMStreamingSession *)session streamStateDidChange:(LMStreamState)state{
+/** live status changed will callback */
+- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state{
     
 }
 
-/** stream debug info callback */
-- (void)streamingSession:(nullable LMStreamingSession *)session debugInfo:(nullable LMStreamDebug*)debugInfo{
+/** live debug info callback */
+- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo{
     
 }
 
 /** callback socket errorcode */
-- (void)streamingSession:(nullable LMStreamingSession*)session errorCode:(LMStreamSocketErrorCode)errorCode{
-
+- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode{
+    
 }
 
 #pragma mark -- Getter Setter
-- (LMStreamingSession*)session{
+- (LFLiveSession*)session{
     if(!_session){
-        _session = [[LMStreamingSession alloc] initWithAudioConfiguration:[LMAudioStreamingConfiguration defaultConfiguration] videoConfiguration:[LMVideoStreamingConfiguration defaultConfiguration] streamType:LMStreamRtmp];
+       _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration] liveType:LFLiveRTMP];
         _session.running = YES;
         _session.preView = self;
-        LMStream *stream = [[LMStream alloc] init];
-        stream.url = @"rtmp://daniulive.com:1935/live/stream238";
-        //stream.url = @"rtmp://10.155.60.33:1935/live/123";
-        _session.stream = stream;
     }
     return _session;
 }
@@ -195,10 +191,12 @@
             _self.startLiveButton.selected = !_self.startLiveButton.selected;
             if(_self.startLiveButton.selected){
                 [_self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
-                _self.session.uploading = YES;
+                LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
+                stream.url = @"rtmp://daniulive.com:1935/live/stream238";
+                [_self.session startLive:stream];
             }else{
                 [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
-                _self.session.uploading = NO;
+                [_self.session stopLive];
             }
         }];
     }
