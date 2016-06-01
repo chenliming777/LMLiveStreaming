@@ -1,3 +1,6 @@
+支持横竖屏，分辨率修改，后台花屏修改等。。。同时支持后台音频传输
+
+
 LMLiveStreaming
 
 需要安装cocoaPod并且需要最新版1.0.0版本，否则可能pod不过，如果用老版本可以尝试把podFile中target "LMLiveStreaming" do   与  end 去掉试一下 
