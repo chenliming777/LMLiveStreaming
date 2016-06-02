@@ -11,23 +11,14 @@ PODS:
 
 DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.4.1)
-  - GPUImage (from `https://github.com/BradLarson/GPUImage`)
+  - GPUImage
   - librtmp-iOS (~> 1.1.0)
-
-EXTERNAL SOURCES:
-  GPUImage:
-    :git: https://github.com/BradLarson/GPUImage
-
-CHECKOUT OPTIONS:
-  GPUImage:
-    :commit: 167b0389bc6e9dc4bb0121550f91d8d5d6412c53
-    :git: https://github.com/BradLarson/GPUImage
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  GPUImage: bd7e201b9aa91e85f401ed7a6d9867a07a404693
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   librtmp-iOS: bfe6a2978e01ac97160ede5d3ccde9e3c1d1ee58
 
-PODFILE CHECKSUM: b183883c6e5b7c1c78305128f26a045c067f3021
+PODFILE CHECKSUM: 3c0349b3286b00817d32f41b944328058425ac66
 
 COCOAPODS: 1.0.0

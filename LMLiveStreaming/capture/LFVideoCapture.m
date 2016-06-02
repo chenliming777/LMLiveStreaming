@@ -183,10 +183,23 @@
     __weak typeof(self) _self = self;
     @autoreleasepool {
         GPUImageFramebuffer *imageFramebuffer = output.framebufferForOutput;
-        CVPixelBufferRef pixelBuffer = [imageFramebuffer pixelBuffer];
+        //CVPixelBufferRef pixelBuffer = [imageFramebuffer pixelBuffer];
+        
+        size_t width = imageFramebuffer.size.width;
+        size_t height = imageFramebuffer.size.height;
+        ///< 这里可能会影响性能，以后要尝试修改GPUImage源码 直接获取CVPixelBufferRef 目前是获取的bytes 其实更麻烦了
+        if(imageFramebuffer.size.width == 360){
+            width = 368;///< 必须被16整除
+        }
+        
+        CVPixelBufferRef pixelBuffer = NULL;
+        CVPixelBufferCreateWithBytes(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, [imageFramebuffer byteBuffer], width * 4, nil, NULL, NULL, &pixelBuffer);
+
         if(pixelBuffer && _self.delegate && [_self.delegate respondsToSelector:@selector(captureOutput:pixelBuffer:)]){
             [_self.delegate captureOutput:_self pixelBuffer:pixelBuffer];
         }
+        CVPixelBufferRelease(pixelBuffer);
+
     }
 }
 
