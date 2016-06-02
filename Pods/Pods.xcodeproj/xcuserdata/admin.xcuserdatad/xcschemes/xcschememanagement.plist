@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LFLiveKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LMLiveStreaming.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>221806CC2FC59942A2B2AE81DB237078</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>48F687CDE9990BD471D7883061F7E5D4</key>
 		<dict>
 			<key>primary</key>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4E64709D1A4E1A718E7E97CFA4E9377</key>
+		<key>A37D007A344DEE7C677C3C6D280BE805</key>
 		<dict>
 			<key>primary</key>
 			<true/>
