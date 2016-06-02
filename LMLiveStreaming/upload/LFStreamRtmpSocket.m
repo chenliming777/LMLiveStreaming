@@ -52,7 +52,8 @@
     dispatch_async(self.socketQueue, ^{
         if(!_stream) return;
         if(_isConnecting) return;
-        [self clean];
+        if(_rtmp != NULL) return;
+        
         [self RTMP264_Connect:(char*)[_stream.url cStringUsingEncoding:NSASCIIStringEncoding]];
     });
 }
@@ -62,6 +63,7 @@
         if(_rtmp != NULL){
             RTMP_Close(_rtmp);
             RTMP_Free(_rtmp);
+            _rtmp = NULL;
         }
         [self clean];
     });
