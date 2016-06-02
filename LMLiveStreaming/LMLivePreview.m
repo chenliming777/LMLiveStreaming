@@ -109,7 +109,7 @@
 #pragma mark -- Getter Setter
 - (LFLiveSession*)session{
     if(!_session){
-       _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration] liveType:LFLiveRTMP];
+       _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
         _session.running = YES;
         _session.preView = self;
     }
