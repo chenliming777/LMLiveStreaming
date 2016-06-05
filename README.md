@@ -7,7 +7,7 @@
 
 
 服务器搭建： 对于初学直播的同学没有RTMP服务器还真。。。，这里简单介绍一下RTMP＋nginx服务器。
-首先下载nginx源码，去nginx.org下载，其次下载nginx-rtmp-module-master（https://github.com/arut/nginx-rtmp-module）代码，再去下载openss（openss.org），然后修改openssl makefile，将PLATFORM=dist改为PLATFORM=darwin64-x86_64-cc，然后cd到nginx源码目录，执行export KERNEL_BITS=64 然后再执行./configure --add-module= nginx-rtmp-module-masterde的路径 --with-openssl= oepnssl源码路径，然后make install.最后查找nginx.conf默认只支持http，添加下面代码再次启动就好了。
+首先下载nginx源码，去nginx.org下载，其次下载nginx-rtmp-module-master（https://github.com/arut/nginx-rtmp-module）代码，再去下载openssl（openssl.org），然后修改openssl makefile，将PLATFORM=dist改为PLATFORM=darwin64-x86_64-cc，然后cd到nginx源码目录，执行export KERNEL_BITS=64 然后再执行./configure --add-module= nginx-rtmp-module-masterde的路径 --with-openssl= oepnssl源码路径，然后make install.最后查找nginx.conf默认只支持http，添加下面代码再次启动就好了。
 
     rtmp {
         server {
