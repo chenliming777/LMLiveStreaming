@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '221806CC2FC59942A2B2AE81DB237078'
+               BlueprintIdentifier = 'FDBF972C63326C21F52DB7C5F20ACF0D'
                BlueprintName = 'LFLiveKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libLFLiveKit.a'>

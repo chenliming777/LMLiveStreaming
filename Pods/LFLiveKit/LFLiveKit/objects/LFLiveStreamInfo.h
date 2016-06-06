@@ -38,8 +38,5 @@ typedef NS_ENUM(NSUInteger,LFLiveSocketErrorCode) {
 @property (nonatomic, copy) NSString *host;         ///< 上传ip
 @property (nonatomic, assign) NSInteger port;       ///< 上传端口号
 
-#pragma mark ------------------ 为了服务器查找出错信息，尽量将一下两个字端传进来
-@property (nonatomic, copy) NSString *userId;
-@property (nonatomic, copy) NSString *roomId;
 
 @end

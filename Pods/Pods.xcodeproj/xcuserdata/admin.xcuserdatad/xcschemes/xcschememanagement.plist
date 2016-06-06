@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GPUImage.xcscheme</key>
+		<key>LFLiveKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>LFLiveKit.xcscheme</key>
+		<key>LMGPUImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>221806CC2FC59942A2B2AE81DB237078</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>48F687CDE9990BD471D7883061F7E5D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6610362E50A6DE8BACCA1F2885CD9157</key>
+		<key>56D3146E97409E8B6EBC253BA82A664F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A37D007A344DEE7C677C3C6D280BE805</key>
+		<key>78F989B62213A7B5D569C4E60D3A981A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDBF972C63326C21F52DB7C5F20ACF0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

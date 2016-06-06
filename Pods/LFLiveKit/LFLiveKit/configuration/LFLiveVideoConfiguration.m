@@ -165,6 +165,27 @@
     return avSessionPreset;
 }
 
+- (void)setVideoMaxBitRate:(NSUInteger)videoMaxBitRate{
+    if(videoMaxBitRate <= _videoBitRate) return;
+    _videoMaxBitRate = videoMaxBitRate;
+}
+
+- (void)setVideoMinBitRate:(NSUInteger)videoMinBitRate{
+    if(videoMinBitRate >= _videoBitRate) return;
+    _videoMinBitRate = videoMinBitRate;
+}
+
+- (void)setVideoMaxFrameRate:(NSUInteger)videoMaxFrameRate{
+    if(videoMaxFrameRate <= _videoFrameRate) return;
+    _videoMaxFrameRate = videoMaxFrameRate;
+}
+
+- (void)setVideoMinFrameRate:(NSUInteger)videoMinFrameRate{
+    if(videoMinFrameRate >= _videoFrameRate) return;
+    _videoMinFrameRate = videoMinFrameRate;
+}
+
+
 #pragma mark -- Custom Method
 - (LFLiveVideoSessionPreset)supportSessionPreset:(LFLiveVideoSessionPreset)sessionPreset{
     NSString *avSessionPreset = [self avSessionPreset];

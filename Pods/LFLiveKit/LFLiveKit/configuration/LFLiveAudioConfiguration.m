@@ -39,9 +39,6 @@
             break;
     }
     audioConfig.audioSampleRate = [self.class isNewThaniPhone6] ? LFLiveAudioSampleRate_48000Hz : LFLiveAudioSampleRate_44100Hz;
-    NSInteger sampleRateIndex = [audioConfig sampleRateIndex:audioConfig.audioSampleRate];
-    audioConfig.asc[0] = 0x10 | ((sampleRateIndex>>1) & 0x3);
-    audioConfig.asc[1] = ((sampleRateIndex & 0x1)<<7) | ((audioConfig.numberOfChannels & 0xF) << 3);
     
     return audioConfig;
 }
@@ -56,6 +53,22 @@
 - (void)dealloc{
     if(_asc) free(_asc);
 }
+
+#pragma mark Setter
+- (void)setAudioSampleRate:(LFLiveAudioSampleRate)audioSampleRate{
+    _audioSampleRate = audioSampleRate;
+    NSInteger sampleRateIndex = [self sampleRateIndex:audioSampleRate];
+    self.asc[0] = 0x10 | ((sampleRateIndex>>1) & 0x3);
+    self.asc[1] = ((sampleRateIndex & 0x1)<<7) | ((self.numberOfChannels & 0xF) << 3);
+}
+
+- (void)setNumberOfChannels:(NSUInteger)numberOfChannels{
+    _numberOfChannels = numberOfChannels;
+    NSInteger sampleRateIndex = [self sampleRateIndex:self.audioSampleRate];
+    self.asc[0] = 0x10 | ((sampleRateIndex>>1) & 0x3);
+    self.asc[1] = ((sampleRateIndex & 0x1)<<7) | ((numberOfChannels & 0xF) << 3);
+}
+
 
 #pragma mark -- CustomMethod
 - (NSInteger)sampleRateIndex:(NSInteger)frequencyInHz{

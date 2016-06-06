@@ -105,43 +105,25 @@
     [_videoCamera removeAllTargets];
     [_beau removeAllTargets];
     
-    //    [_cropfilter1 removeAllTargets];
-    //    [_scale removeAllTargets];
-    
     if(_beautyFace){
-        //_filter = [[LFGPUImageBeautyFilter alloc] init];
-        //        _scale = [[GPUImageTransformFilter alloc] init];
-        //        [(GPUImageTransformFilter*)_scale setAffineTransform:CGAffineTransformMakeScale(0.5, 0.5)];
-        //        _cropfilter1 = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.25, 0.25, 0.5, 0.5)];
-        
         _filter = [[GPUImageUnsharpMaskFilter alloc] init];
-        //[(GPUImageUnsharpMaskFilter*)_filter setIntensity:1.35];
         [(GPUImageUnsharpMaskFilter*)_filter setIntensity:1.23];
         [(GPUImageUnsharpMaskFilter*)_filter setBlurRadiusInPixels:13];
         _beau = [[LFGPUImageBeautyFilter alloc] init];
-        //CGFloat radiusInPixels = _configuration.isClipVideo ? 9 : 13;//////< 360  540 720 :////  9   9   13
-        //[(LFGPUImageBeautyFilter*)_filter setBlurRadiusInPixels:radiusInPixels];
         _emptyFilter = [[LFGPUImageEmptyFilter alloc] init];
-        //[(GPUImageUnsharpMaskFilter*)_emptyFilter setIntensity:1.01];
-        //[(GPUImageUnsharpMaskFilter*)_emptyFilter setBlurRadiusInPixels:7];
     }else{
         _filter = [[LFGPUImageEmptyFilter alloc] init];
-        //        _filter = [[GPUImageTransformFilter alloc] init];
-        //        [(GPUImageTransformFilter*)_filter setAffineTransform:CGAffineTransformMakeScale(0.5, 0.5)];
-        //        _cropfilter1 = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.25, 0.25, 0.5, 0.5)];
     }
     
     
     
     if (beautyFace) {
         __weak typeof(self) _self = self;
-        //[_filter forceProcessingAtSize:_configuration.videoSize];
         [_emptyFilter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime time) {
             [_self processVideo:output];
         }];
     } else {
         __weak typeof(self) _self = self;
-        //[_filter forceProcessingAtSize:_configuration.videoSize];
         [_filter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime time) {
             [_self processVideo:output];
         }];
@@ -150,9 +132,9 @@
     
     if(_configuration.isClipVideo){
         if(_configuration.orientation == UIInterfaceOrientationPortrait || _configuration.orientation == UIInterfaceOrientationPortraitUpsideDown){
-            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.125, 0, 0.75, 1)];
+            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(56.0/480.0, 0, 1 - 56.0/480.0*2, 1)];
         }else{
-            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0, 0.125, 1, 0.75)];
+            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0, 56.0/480.0, 1, 1 - 56.0/480.0*2)];
         }
         [_videoCamera addTarget:_cropfilter];
         [_cropfilter addTarget:_filter];
@@ -162,17 +144,10 @@
     }
     
     if (beautyFace) {
-        //        [_videoCamera addTarget:_scale];
-        //        [_scale addTarget:_cropfilter1];
-        //        [_cropfilter1 addTarget:_filter];
-        
         [_filter addTarget:_beau];
         [_beau addTarget:_emptyFilter];
         [_emptyFilter addTarget:_gpuImageView];
     } else {
-        //        [_videoCamera addTarget:_filter];
-        //        [_filter addTarget:_cropfilter1];
-        //        [_cropfilter1 addTarget:_gpuImageView];
         [_filter addTarget:_gpuImageView];
     }
     
@@ -183,22 +158,11 @@
     __weak typeof(self) _self = self;
     @autoreleasepool {
         GPUImageFramebuffer *imageFramebuffer = output.framebufferForOutput;
-        //CVPixelBufferRef pixelBuffer = [imageFramebuffer pixelBuffer];
+        CVPixelBufferRef pixelBuffer = [imageFramebuffer pixelBuffer];
         
-        size_t width = imageFramebuffer.size.width;
-        size_t height = imageFramebuffer.size.height;
-        ///< 这里可能会影响性能，以后要尝试修改GPUImage源码 直接获取CVPixelBufferRef 目前是获取的bytes 其实更麻烦了
-        if(imageFramebuffer.size.width == 360){
-            width = 368;///< 必须被16整除
-        }
-        
-        CVPixelBufferRef pixelBuffer = NULL;
-        CVPixelBufferCreateWithBytes(kCFAllocatorDefault, width, height, kCVPixelFormatType_32BGRA, [imageFramebuffer byteBuffer], width * 4, nil, NULL, NULL, &pixelBuffer);
-
         if(pixelBuffer && _self.delegate && [_self.delegate respondsToSelector:@selector(captureOutput:pixelBuffer:)]){
             [_self.delegate captureOutput:_self pixelBuffer:pixelBuffer];
         }
-        CVPixelBufferRelease(pixelBuffer);
 
     }
 }
