@@ -31,13 +31,14 @@
         _configuration = configuration;
         _videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:_configuration.avSessionPreset cameraPosition:AVCaptureDevicePositionFront];
         _videoCamera.outputImageOrientation = _configuration.orientation;
-        _videoCamera.horizontallyMirrorFrontFacingCamera = YES;
+        _videoCamera.horizontallyMirrorFrontFacingCamera = NO;
         _videoCamera.horizontallyMirrorRearFacingCamera = NO;
         _videoCamera.frameRate = (int32_t)_configuration.videoFrameRate;
         
         _gpuImageView = [[GPUImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [_gpuImageView setFillMode:kGPUImageFillModePreserveAspectRatioAndFill];
         [_gpuImageView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+        [_gpuImageView setInputRotation:kGPUImageFlipHorizonal atIndex:0];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterBackground:) name:UIApplicationWillResignActiveNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForeground:) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -79,6 +80,8 @@
 - (void)setCaptureDevicePosition:(AVCaptureDevicePosition)captureDevicePosition{
     [_videoCamera rotateCamera];
     _videoCamera.frameRate = (int32_t)_configuration.videoFrameRate;
+    if(captureDevicePosition == AVCaptureDevicePositionFront) [_gpuImageView setInputRotation:kGPUImageFlipHorizonal atIndex:0];
+    else [_gpuImageView setInputRotation:kGPUImageNoRotation atIndex:0];
 }
 
 - (AVCaptureDevicePosition)captureDevicePosition{

@@ -3,6 +3,6 @@ platform :ios,'8.0'
 
 target "LMLiveStreaming" do
 
-pod 'LFLiveKit', '~> 1.3.2'
+pod 'LFLiveKit', '~> 1.3.3'
 
 end
