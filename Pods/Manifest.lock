@@ -6,7 +6,7 @@ PODS:
     - CocoaAsyncSocket/RunLoop
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
-  - LFLiveKit (1.3.3):
+  - LFLiveKit (1.3.4):
     - CocoaAsyncSocket (~> 7.4.1)
     - librtmp-iOS (~> 1.1.0)
     - LMGPUImage (~> 0.1.9)
@@ -14,14 +14,14 @@ PODS:
   - LMGPUImage (0.1.9)
 
 DEPENDENCIES:
-  - LFLiveKit (~> 1.3.3)
+  - LFLiveKit (~> 1.3.4)
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  LFLiveKit: 39ca8f840c2090e30e87767abda03cbcebdfde23
+  LFLiveKit: 51056ac3f3346b9c698f332625abcf0bd3cc7ccc
   librtmp-iOS: bfe6a2978e01ac97160ede5d3ccde9e3c1d1ee58
   LMGPUImage: 8e2e5d0f7065953eb7812de842db4c87d59abf09
 
-PODFILE CHECKSUM: 9132d366ece68df98bc0160e51fb19ec15fda262
+PODFILE CHECKSUM: d1f2c3f8413f4c419906ddac17af81fa14611c72
 
 COCOAPODS: 1.0.0

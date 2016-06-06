@@ -153,6 +153,8 @@
     } else {
         [_filter addTarget:_gpuImageView];
     }
+    if(_videoCamera.cameraPosition == AVCaptureDevicePositionFront) [_gpuImageView setInputRotation:kGPUImageFlipHorizonal atIndex:0];
+    else [_gpuImageView setInputRotation:kGPUImageNoRotation atIndex:0];
     
 }
 
