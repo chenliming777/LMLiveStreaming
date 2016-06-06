@@ -25,9 +25,9 @@
 + (instancetype)defaultConfigurationForQuality:(LFLiveVideoQuality)videoQuality orientation:(UIInterfaceOrientation)orientation{
     LFLiveVideoConfiguration *configuration = [LFLiveVideoConfiguration new];
     switch (videoQuality) {
-        case LFLiveVideoQuality_Low1:
+            case LFLiveVideoQuality_Low1:
         {
-            configuration.sessionPreset = LFCaptureSessionPreset368x640;
+            configuration.sessionPreset = LFCaptureSessionPreset360x640;
             configuration.videoFrameRate = 15;
             configuration.videoMaxFrameRate = 15;
             configuration.videoMinFrameRate = 10;
@@ -36,9 +36,9 @@
             configuration.videoMinBitRate = 250 * 1024;
         }
             break;
-        case LFLiveVideoQuality_Low2:
+            case LFLiveVideoQuality_Low2:
         {
-            configuration.sessionPreset = LFCaptureSessionPreset368x640;
+            configuration.sessionPreset = LFCaptureSessionPreset360x640;
             configuration.videoFrameRate = 24;
             configuration.videoMaxFrameRate = 24;
             configuration.videoMinFrameRate = 12;
@@ -47,9 +47,9 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_Low3:
+            case LFLiveVideoQuality_Low3:
         {
-            configuration.sessionPreset = LFCaptureSessionPreset368x640;
+            configuration.sessionPreset = LFCaptureSessionPreset360x640;
             configuration.videoFrameRate = 30;
             configuration.videoMaxFrameRate = 30;
             configuration.videoMinFrameRate = 15;
@@ -58,7 +58,7 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_Medium1:
+            case LFLiveVideoQuality_Medium1:
         {
             configuration.sessionPreset = LFCaptureSessionPreset540x960;
             configuration.videoFrameRate = 15;
@@ -69,7 +69,7 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_Medium2:
+            case LFLiveVideoQuality_Medium2:
         {
             configuration.sessionPreset = LFCaptureSessionPreset540x960;
             configuration.videoFrameRate = 24;
@@ -80,7 +80,7 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_Medium3:
+            case LFLiveVideoQuality_Medium3:
         {
             configuration.sessionPreset = LFCaptureSessionPreset540x960;
             configuration.videoFrameRate = 30;
@@ -91,7 +91,7 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_High1:
+            case LFLiveVideoQuality_High1:
         {
             configuration.sessionPreset = LFCaptureSessionPreset720x1280;
             configuration.videoFrameRate = 15;
@@ -102,7 +102,7 @@
             configuration.videoMinBitRate = 500 * 1024;
         }
             break;
-        case LFLiveVideoQuality_High2:
+            case LFLiveVideoQuality_High2:
         {
             configuration.sessionPreset = LFCaptureSessionPreset720x1280;
             configuration.videoFrameRate = 24;
@@ -113,7 +113,7 @@
             configuration.videoMinBitRate = 800 * 1024;
         }
             break;
-        case LFLiveVideoQuality_High3:
+            case LFLiveVideoQuality_High3:
         {
             configuration.sessionPreset = LFCaptureSessionPreset720x1280;
             configuration.videoFrameRate = 30;
@@ -142,17 +142,17 @@
 - (NSString*)avSessionPreset{
     NSString *avSessionPreset = nil;
     switch (self.sessionPreset) {
-        case LFCaptureSessionPreset368x640:
+            case LFCaptureSessionPreset360x640:
         {
             avSessionPreset = AVCaptureSessionPreset640x480;
         }
             break;
-        case LFCaptureSessionPreset540x960:
+            case LFCaptureSessionPreset540x960:
         {
             avSessionPreset = AVCaptureSessionPresetiFrame960x540;
         }
             break;
-        case LFCaptureSessionPreset720x1280:
+            case LFCaptureSessionPreset720x1280:
         {
             avSessionPreset = AVCaptureSessionPreset1280x720;
         }
@@ -195,17 +195,17 @@
         if(sessionPreset == LFCaptureSessionPreset720x1280){
             sessionPreset = LFCaptureSessionPreset540x960;
             if(![session canSetSessionPreset:avSessionPreset]){
-                sessionPreset = LFCaptureSessionPreset368x640;
+                sessionPreset = LFCaptureSessionPreset360x640;
             }
         }else if(sessionPreset == LFCaptureSessionPreset540x960){
-            sessionPreset = LFCaptureSessionPreset368x640;
+            sessionPreset = LFCaptureSessionPreset360x640;
         }
     }
     return sessionPreset;
 }
 
 - (BOOL)isClipVideo{
-    return self.sessionPreset == LFCaptureSessionPreset368x640 ? YES : NO;
+    return self.sessionPreset == LFCaptureSessionPreset360x640 ? YES : NO;
 }
 
 #pragma mark -- encoder

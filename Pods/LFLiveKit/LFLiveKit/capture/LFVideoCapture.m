@@ -132,9 +132,9 @@
     
     if(_configuration.isClipVideo){
         if(_configuration.orientation == UIInterfaceOrientationPortrait || _configuration.orientation == UIInterfaceOrientationPortraitUpsideDown){
-            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(56.0/480.0, 0, 1 - 56.0/480.0*2, 1)];
+            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.125, 0, 0.75, 1)];
         }else{
-            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0, 56.0/480.0, 1, 1 - 56.0/480.0*2)];
+            _cropfilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0, 0.125, 1, 0.75)];
         }
         [_videoCamera addTarget:_cropfilter];
         [_cropfilter addTarget:_filter];
