@@ -181,10 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F872971CEF04D600C4B126 /* Build configuration list for PBXNativeTarget "LMLiveStreaming" */;
 			buildPhases = (
+				2BB4B39B7F92E93D9517DA3F /* 📦 Check Pods Manifest.lock */,
 				84F872661CEF04D600C4B126 /* Sources */,
 				84F872671CEF04D600C4B126 /* Frameworks */,
 				84F872681CEF04D600C4B126 /* Resources */,
 				C5801644871121F7717A135E /* 📦 Embed Pods Frameworks */,
+				952A29A65C589D79C9D4AB1F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +251,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BB4B39B7F92E93D9517DA3F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		952A29A65C589D79C9D4AB1F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C5801644871121F7717A135E /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
