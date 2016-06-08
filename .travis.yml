@@ -4,4 +4,4 @@ xcode_workspace: LMLiveStreaming.xcworkspace
 xcode_scheme: LMLiveStreaming
 
 script:
-- xctool -workspace LMLiveStreaming.xcworkspace -scheme 'LMLiveStreaming' 
+- xctool -workspace LMLiveStreaming.xcworkspace -scheme 'LMLiveStreaming' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
