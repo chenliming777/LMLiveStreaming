@@ -1,9 +1,0 @@
-CLANG_MODULES_AUTOLINK = YES
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = ${PODS_ROOT}/librtmp-iOS/include/** $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/LFLiveKit" "${PODS_ROOT}/Headers/Public/LMGPUImage" "${PODS_ROOT}/Headers/Public/librtmp-iOS"
-LIBRARY_SEARCH_PATHS = $(inherited) ${PODS_ROOT}/librtmp-iOS/lib/** "$PODS_CONFIGURATION_BUILD_DIR/CocoaAsyncSocket" "$PODS_CONFIGURATION_BUILD_DIR/LFLiveKit" "$PODS_CONFIGURATION_BUILD_DIR/LMGPUImage" $(inherited) "${PODS_ROOT}/librtmp-iOS/lib"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" -isystem "${PODS_ROOT}/Headers/Public/LFLiveKit" -isystem "${PODS_ROOT}/Headers/Public/LMGPUImage" -isystem "${PODS_ROOT}/Headers/Public/librtmp-iOS"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaAsyncSocket" -l"LFLiveKit" -l"LMGPUImage" -l"crypto" -l"rtmp" -l"ssl" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreMedia" -framework "Foundation" -framework "OpenGLES" -framework "QuartzCore" -framework "Security" -framework "UIKit" -framework "VideoToolbox"
-PODS_BUILD_DIR = $BUILD_DIR
-PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
-PODS_ROOT = ${SRCROOT}/Pods
