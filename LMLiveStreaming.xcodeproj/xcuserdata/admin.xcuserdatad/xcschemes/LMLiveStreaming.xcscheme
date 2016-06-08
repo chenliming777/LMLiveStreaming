@@ -56,20 +56,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56D3146E97409E8B6EBC253BA82A664F"
-               BuildableName = "libPods-LMLiveStreaming.a"
-               BlueprintName = "Pods-LMLiveStreaming"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "84F872691CEF04D600C4B126"
                BuildableName = "LMLiveStreaming.app"
                BlueprintName = "LMLiveStreaming"
