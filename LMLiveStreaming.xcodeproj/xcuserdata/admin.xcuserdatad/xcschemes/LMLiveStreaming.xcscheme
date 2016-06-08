@@ -42,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56D3146E97409E8B6EBC253BA82A664F"
-               BuildableName = "libPods-LMLiveStreaming.a"
-               BlueprintName = "Pods-LMLiveStreaming"
+               BlueprintIdentifier = "FDBF972C63326C21F52DB7C5F20ACF0D"
+               BuildableName = "libLFLiveKit.a"
+               BlueprintName = "LFLiveKit"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,9 +56,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDBF972C63326C21F52DB7C5F20ACF0D"
-               BuildableName = "libLFLiveKit.a"
-               BlueprintName = "LFLiveKit"
+               BlueprintIdentifier = "56D3146E97409E8B6EBC253BA82A664F"
+               BuildableName = "libPods-LMLiveStreaming.a"
+               BlueprintName = "Pods-LMLiveStreaming"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -84,26 +84,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84F872821CEF04D600C4B126"
-               BuildableName = "LMLiveStreamingTests.xctest"
-               BlueprintName = "LMLiveStreamingTests"
-               ReferencedContainer = "container:LMLiveStreaming.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84F8728D1CEF04D600C4B126"
-               BuildableName = "LMLiveStreamingUITests.xctest"
-               BlueprintName = "LMLiveStreamingUITests"
-               ReferencedContainer = "container:LMLiveStreaming.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
