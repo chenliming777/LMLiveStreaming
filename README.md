@@ -86,15 +86,26 @@ Usage
     [self.session startLive:streamInfo];
     [self.session stopLive];
 
+
 CallBack:
+
     - (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange: (LFLiveState)state;
     - (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo;
     - (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode;
 
 
+
+
 License
 
 LFLiveKit is released under the MIT license. See LICENSE for details.
+
+
+
+
+
+
+
 
 
 
