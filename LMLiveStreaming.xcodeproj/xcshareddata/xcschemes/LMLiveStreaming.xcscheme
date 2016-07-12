@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78F989B62213A7B5D569C4E60D3A981A"
+               BlueprintIdentifier = "4DFDBAD128119EDC39FA734F357A9CBA"
                BuildableName = "libLMGPUImage.a"
                BlueprintName = "LMGPUImage"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FDBF972C63326C21F52DB7C5F20ACF0D"
+               BlueprintIdentifier = "05D31E037DFDD4FE5825858EFA763994"
                BuildableName = "libLFLiveKit.a"
                BlueprintName = "LFLiveKit"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56D3146E97409E8B6EBC253BA82A664F"
+               BlueprintIdentifier = "82FE8E46E9B41C5193A7720318715F89"
                BuildableName = "libPods-LMLiveStreaming.a"
                BlueprintName = "Pods-LMLiveStreaming"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
