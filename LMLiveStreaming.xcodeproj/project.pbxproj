@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41F71A70A716A30F0ECAC461 /* libPods-LMLiveStreaming.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9CAFDC26808B5A5F7633F9 /* libPods-LMLiveStreaming.a */; };
 		84001F551CFF136D0026C63F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84001EFC1CFF136D0026C63F /* AppDelegate.m */; };
 		84001F561CFF136D0026C63F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84001EFD1CFF136D0026C63F /* Assets.xcassets */; };
 		84001F571CFF136D0026C63F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84001EFE1CFF136D0026C63F /* LaunchScreen.storyboard */; };
@@ -31,6 +30,7 @@
 		84F8739A1CEF05A700C4B126 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F873991CEF05A700C4B126 /* AVFoundation.framework */; };
 		84F8739C1CEF05AB00C4B126 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8739B1CEF05AB00C4B126 /* AudioToolbox.framework */; };
 		84F8739E1CEF05B000C4B126 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8739D1CEF05B000C4B126 /* VideoToolbox.framework */; };
+		DF5B849A1D6997839AF796A5 /* libPods-LMLiveStreaming.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B03E5570E15B32432C249639 /* libPods-LMLiveStreaming.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,7 @@
 		84F873991CEF05A700C4B126 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84F8739B1CEF05AB00C4B126 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		84F8739D1CEF05B000C4B126 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		CA9CAFDC26808B5A5F7633F9 /* libPods-LMLiveStreaming.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMLiveStreaming.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03E5570E15B32432C249639 /* libPods-LMLiveStreaming.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMLiveStreaming.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFF595171B166A12E2181CD /* Pods-LMLiveStreaming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMLiveStreaming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMLiveStreaming/Pods-LMLiveStreaming.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 				84F873981CEF05A200C4B126 /* Foundation.framework in Frameworks */,
 				84F873961CEF059E00C4B126 /* UIKit.framework in Frameworks */,
 				84F873941CEF059900C4B126 /* libz.tbd in Frameworks */,
-				41F71A70A716A30F0ECAC461 /* libPods-LMLiveStreaming.a in Frameworks */,
+				DF5B849A1D6997839AF796A5 /* libPods-LMLiveStreaming.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +169,7 @@
 				84F873971CEF05A200C4B126 /* Foundation.framework */,
 				84F873951CEF059E00C4B126 /* UIKit.framework */,
 				84F873931CEF059900C4B126 /* libz.tbd */,
-				CA9CAFDC26808B5A5F7633F9 /* libPods-LMLiveStreaming.a */,
+				B03E5570E15B32432C249639 /* libPods-LMLiveStreaming.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
