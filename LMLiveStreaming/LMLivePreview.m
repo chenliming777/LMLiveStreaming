@@ -57,7 +57,9 @@
         }
         case AVAuthorizationStatusAuthorized:{
             // 已经开启授权，可继续
-            [_self.session setRunning:YES];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_self.session setRunning:YES];
+            });
             break;
         }
         case AVAuthorizationStatusDenied:
@@ -93,7 +95,7 @@
 #pragma mark -- LFStreamingSessionDelegate
 /** live status changed will callback */
 - (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state{
-    
+    NSLog(@"state");
 }
 
 /** live debug info callback */
@@ -196,8 +198,9 @@
         */
         
         
-        _session.running = YES;
+        //_session.running = YES;
         _session.preView = self;
+        _session.delegate = self;
     }
     return _session;
 }
